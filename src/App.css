@@ -1,0 +1,679 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Times New Roman", Times, serif;
+  color: #111827;
+  background: #f3f5fb;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.homepage {
+  min-height: 100vh;
+  padding: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(148, 163, 184, 0.28), transparent 32%),
+    linear-gradient(135deg, #0f172a, #1e293b 52%, #f8fafc);
+  color: white;
+}
+
+.home-nav {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.logo,
+.side-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo span,
+.side-logo span {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0f172a;
+  font-weight: 900;
+}
+
+.hero-clean {
+  max-width: 980px;
+  margin: 95px auto 54px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.13);
+  color: #e2e8f0;
+  font-weight: 700;
+}
+
+.hero-clean h1 {
+  max-width: 850px;
+  margin: 18px auto;
+  font-size: clamp(42px, 7vw, 74px);
+  line-height: 0.98;
+  letter-spacing: -2px;
+}
+
+.hero-clean p {
+  max-width: 760px;
+  margin: 0 auto;
+  color: #e2e8f0;
+  line-height: 1.65;
+  font-size: 19px;
+}
+
+.start-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  max-width: 720px;
+  margin: 34px auto 0;
+}
+
+.start-grid button {
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 22px;
+  padding: 24px;
+  text-align: left;
+  color: white;
+  background: rgba(255,255,255,0.12);
+}
+
+.start-grid button:hover {
+  background: white;
+  color: #0f172a;
+}
+
+.start-grid strong {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.start-grid span {
+  color: inherit;
+  opacity: 0.82;
+}
+
+.feature-grid {
+  max-width: 1180px;
+  margin: 0 auto 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.feature-card {
+  padding: 22px;
+  border-radius: 22px;
+  color: #0f172a;
+  background: rgba(255,255,255,0.88);
+  border: 1px solid rgba(255,255,255,0.24);
+}
+
+.feature-card h3 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.55;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 285px 1fr;
+}
+
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding: 22px;
+  background: #0f172a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.side-logo {
+  margin-bottom: 10px;
+}
+
+.side-logo small {
+  display: block;
+  color: #cbd5e1;
+  margin-top: 3px;
+}
+
+.score-box {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.1);
+  margin-bottom: 8px;
+}
+
+.score-box span {
+  color: #e2e8f0;
+}
+
+.score-box strong {
+  display: block;
+  font-size: 36px;
+  margin: 6px 0;
+}
+
+.progress {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.18);
+  overflow: hidden;
+}
+
+.progress div {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #38bdf8);
+}
+
+.sidebar button {
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 14px;
+  color: #e2e8f0;
+  background: transparent;
+  text-align: left;
+  font-weight: 700;
+}
+
+.sidebar button:hover,
+.sidebar button.active {
+  color: white;
+  background: rgba(255,255,255,0.13);
+}
+
+.sidebar .print {
+  margin-top: auto;
+  text-align: center;
+  color: #0f172a;
+  background: white;
+}
+
+.sidebar .danger {
+  color: #fecaca;
+  background: rgba(220,38,38,0.14);
+  text-align: center;
+}
+
+.builder-main {
+  padding: 28px;
+}
+
+.builder-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.builder-top h2 {
+  margin: 0;
+  font-size: 38px;
+}
+
+.builder-top p {
+  margin: 5px 0 0;
+  color: #64748b;
+}
+
+.top-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.top-actions button,
+.primary,
+.secondary {
+  border: 0;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 700;
+}
+
+.top-actions button,
+.secondary {
+  background: white;
+  color: #111827;
+  border: 1px solid #cbd5e1;
+}
+
+.primary {
+  background: #111827;
+  color: white;
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.preview-only {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.editor-panel,
+.preview-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 18px 50px rgba(15,23,42,0.08);
+}
+
+.preview-card {
+  position: sticky;
+  top: 24px;
+  max-height: calc(100vh - 48px);
+  overflow: auto;
+}
+
+.section-title h2 {
+  margin: 0;
+  font-size: 30px;
+}
+
+.section-title p {
+  color: #64748b;
+  margin: 6px 0 18px;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.two {
+  grid-template-columns: 1fr 1fr;
+}
+
+.three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+label {
+  display: block;
+  margin-bottom: 7px;
+  color: #334155;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 11px;
+  padding: 12px 13px;
+  outline: none;
+  background: #f8fafc;
+  color: #111827;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #111827;
+  box-shadow: 0 0 0 4px rgba(15,23,42,0.08);
+}
+
+.inline-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.skill-list,
+.resume-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 16px;
+}
+
+.skill-list span,
+.resume-skills span {
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  color: #111827;
+  font-weight: 700;
+}
+
+.skill-list button {
+  margin-left: 8px;
+  border: 0;
+  border-radius: 50%;
+  background: #cbd5e1;
+  color: #111827;
+  width: 22px;
+  height: 22px;
+}
+
+.empty,
+.muted {
+  color: #64748b;
+}
+
+.card,
+.score-panel {
+  position: relative;
+  padding: 18px;
+  border-radius: 18px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  margin-top: 16px;
+}
+
+.remove {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: 0;
+  border-radius: 10px;
+  padding: 7px 10px;
+  color: #991b1b;
+  background: #fee2e2;
+  font-weight: 700;
+}
+
+.resume {
+  background: white;
+  color: #111827;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 34px;
+  border: 1px solid #d1d5db;
+  line-height: 1.43;
+}
+
+.resume header {
+  padding-bottom: 16px;
+  border-bottom: 2px solid #111827;
+}
+
+.resume h1 {
+  margin: 0;
+  font-size: 40px;
+  letter-spacing: -1px;
+}
+
+.resume h2 {
+  margin: 4px 0 8px;
+  font-size: 22px;
+}
+
+.resume header p {
+  margin: 4px 0;
+  color: #475569;
+  font-size: 14px;
+}
+
+.resume section {
+  margin-top: 18px;
+}
+
+.resume h3 {
+  margin: 0 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #cbd5e1;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.resume-item {
+  margin-bottom: 13px;
+}
+
+.resume-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.resume-row span {
+  color: #64748b;
+}
+
+.resume-two {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.resume.modern {
+  border-left: 9px solid #1d4ed8;
+}
+
+.resume.modern h2,
+.resume.modern h3 {
+  color: #1d4ed8;
+}
+
+.resume.classic {
+  border: 1px solid #111827;
+}
+
+.resume.classic header {
+  text-align: center;
+  border-bottom: 3px double #111827;
+}
+
+.resume.classic .resume-skills span {
+  background: white;
+  border: 1px solid #111827;
+}
+
+.resume.minimal {
+  border: 0;
+  box-shadow: none;
+  padding: 24px;
+}
+
+.resume.minimal header {
+  border-bottom: 1px solid #94a3b8;
+}
+
+.resume.minimal h3 {
+  border-bottom: 0;
+  font-size: 15px;
+}
+
+.resume.executive header {
+  background: #111827;
+  color: white;
+  padding: 24px;
+  margin: -34px -34px 20px;
+  border: 0;
+}
+
+.resume.executive header p {
+  color: #e2e8f0;
+}
+
+.resume.executive h3 {
+  color: #111827;
+  border-bottom: 2px solid #111827;
+}
+
+.resume.creative {
+  border: 0;
+  background: linear-gradient(90deg, #eff6ff 0 28%, white 28% 100%);
+}
+
+.resume.creative header {
+  border-bottom: 0;
+  padding: 20px;
+  background: #1e3a8a;
+  color: white;
+}
+
+.resume.creative header p {
+  color: #dbeafe;
+}
+
+.resume.creative h3 {
+  color: #1e3a8a;
+}
+
+.resume.ats {
+  border: 0;
+  padding: 24px;
+}
+
+.resume.ats h1 {
+  font-size: 32px;
+}
+
+.resume.ats header,
+.resume.ats h3 {
+  border-color: #111827;
+}
+
+.resume.ats .resume-skills {
+  display: block;
+}
+
+.resume.ats .resume-skills span {
+  background: none;
+  padding: 0;
+  margin-right: 8px;
+}
+
+@media (max-width: 1150px) {
+  .app-shell,
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar,
+  .preview-card {
+    position: static;
+    height: auto;
+    max-height: none;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .homepage,
+  .builder-main {
+    padding: 16px;
+  }
+
+  .builder-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .start-grid,
+  .two,
+  .three,
+  .feature-grid,
+  .inline-form,
+  .resume-two {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-row {
+    flex-direction: column;
+  }
+
+  .resume {
+    padding: 22px;
+  }
+
+  .resume.executive header {
+    margin: -22px -22px 18px;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .sidebar,
+  .builder-top,
+  .editor-panel,
+  .homepage {
+    display: none !important;
+  }
+
+  .app-shell,
+  .builder-main,
+  .workspace,
+  .preview-only,
+  .preview-card {
+    display: block;
+    padding: 0;
+    margin: 0;
+    background: white;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .preview-card {
+    max-height: none;
+    overflow: visible;
+  }
+
+  .resume {
+    max-width: none;
+    border: 0;
+  }
+}
